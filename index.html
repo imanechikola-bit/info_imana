@@ -94,26 +94,18 @@ function setLanguage(lang){currentLang=lang;document.documentElement.lang=lang;d
 searchInput.addEventListener("input",renderCards);categoryFilter.addEventListener("change",renderCards);document.getElementById("language").addEventListener("change",e=>setLanguage(e.target.value));document.getElementById("menuBtn").addEventListener("click",()=>document.getElementById("navLinks").classList.toggle("open"));document.querySelectorAll("#navLinks a").forEach(a=>a.addEventListener("click",()=>document.getElementById("navLinks").classList.remove("open")));
 const modal=document.getElementById("resourceModal");cards.addEventListener("click",e=>{const b=e.target.closest("[data-index]");if(!b)return;const r=translations[currentLang].resources[Number(b.dataset.index)],t=translations[currentLang];document.getElementById("modalTitle").textContent=r.title;document.getElementById("modalDescription").textContent=r.desc;document.getElementById("modalTip").textContent=t.tip;modal.classList.add("show")});function closeModal(){modal.classList.remove("show")}document.getElementById("closeModal").addEventListener("click",closeModal);modal.addEventListener("click",e=>{if(e.target===modal)closeModal()});document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});document.getElementById("year").textContent=new Date().getFullYear();renderCards();
 </script>
-<section class="lesson">
-  <h2>📚 دروس الإعلام الآلي</h2>
-  <p>تقنية المعلومات — السنة الأولى ثانوي</p>
-  <a href="./الوحدة_01_تقنية_المعلومات.pdf" target="_blank">
-    📘 عرض الدرس PDF
-  </a>
-</section>
- <section class="lesson">
-  <h2>📚 دروس الإعلام الآلي</h2>
-  <p>تقنية المعلومات — السنة الأولى ثانوي</p>
-  <a href="./الوحدة_02_تجميع _الحاسوب.pdf" target="_blank">
-    📘 عرض الدرس PDF
-  </a>
-</section>
- <section class="lesson">
-  <h2>📚 دروس الإعلام الآلي</h2>
-  <p>تقنية المعلومات — السنة الأولى ثانوي</p>
-  <a href="./الوحدة_03_نظام_التشغيل.pdf" target="_blank">
-    📘 عرض الدرس PDF
-  </a>
+<section class="lessons">
+  <h2>دروس الإعلام الآلي</h2>
+  <h3>المجال الأول: بيئة التعامل مع الحاسوب</h3>
+
+  <ul>
+    <li><a href="./الوحدة_01_تقنية_المعلومات.pdf">الوحدة 01</a></li>
+    <li><a href="./الوحدة_02_تجميع _الحاسوب.pdf">الوحدة 02</a></li>
+    <li><a href="./الوحدة_03_نظام_التشغيل.pdf">الوحدة 03</a></li>
+    <li><a href="./unite-04.pdf">الوحدة 04</a></li>
+    <li><a href="./unite-05.pdf">الوحدة 05</a></li>
+    <li><a href="./unite-06.pdf">الوحدة 06</a></li>
+  </ul>
 </section>
 </body>
 </html>
